@@ -1,4 +1,7 @@
-﻿{
+{
   "python.pythonPath": ".venv\\Scripts\\python.exe",
-  "python.envFile": "\\\.env"
+  "python.envFile": "${workspaceFolder}\\.env",
+  "cSpell.words": [
+    "comming"
+  ]
 }

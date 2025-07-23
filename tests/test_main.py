@@ -1,5 +1,5 @@
 import unittest
-from src.main import hello
+from main import hello
 
 class TestMain(unittest.TestCase):
     def test_hello(self):
@@ -7,3 +7,4 @@ class TestMain(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+    
