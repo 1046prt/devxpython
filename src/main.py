@@ -1,5 +1,5 @@
-def hello():
-    return "Hello, World!"
+import streamlit as st # type: ignore
 
-if __name__ == "__main__":
-    print(hello())
+st.title("🚀 My First Streamlit App")
+st.write("Hello, World!")
+st.button("Click me!")
