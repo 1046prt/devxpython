@@ -1,3 +1,16 @@
+import subprocess
+import sys
+
+def install_if_missing(package):
+    try:
+        __import__(package)
+    except ImportError:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+install_if_missing("streamlit")
+install_if_missing("pandas")
+install_if_missing("numpy")
+install_if_missing("plotly")
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -11,7 +24,6 @@ from sklearn.metrics import r2_score, mean_absolute_error
 from datetime import datetime
 import time
 
-# Page configuration
 st.set_page_config(
     page_title="Luxury Car Explorer", 
     layout="wide", 
@@ -19,7 +31,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Enhanced CSS with vibrant, eye-catching colors
 def inject_css(dark_mode=False):
     if dark_mode:
         css = """
